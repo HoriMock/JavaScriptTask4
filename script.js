@@ -57,12 +57,15 @@ const fetchQuizData = async (index) => {
   titleId.textContent = "取得中";
   questionId.textContent = "少々お待ち下さい";
 
-  const response = await fetch(API_URL);
-  const data = await response.json();
-  // Quizクラスをインスタンス化
-  const quizInstance = new Quiz(data);
-
-  setNextQuiz(quizInstance, index);
+  try {
+    const response = await fetch(API_URL);
+    const data = await response.json();
+    // Quizクラスをインスタンス化
+    const quizInstance = new Quiz(data);
+    setNextQuiz(quizInstance, index);
+  } catch (error) {
+    alert(error);
+  }
 };
 
 // 開始ボタンのイベント
