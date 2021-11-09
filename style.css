@@ -1,0 +1,19 @@
+#genre,
+#difficulty {
+  margin: 0 auto;
+}
+
+#start-quiz,
+#home {
+  margin-top: 15px;
+}
+
+#question {
+  padding: 10px 0;
+  border-top: 1px solid rgb(224, 215, 215);
+  border-bottom: 1px solid rgb(224, 215, 215);
+}
+
+li {
+  margin-bottom: 4px;
+}
