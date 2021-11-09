@@ -64,7 +64,7 @@ const fetchQuizData = async (index) => {
     const quizInstance = new Quiz(data);
     setNextQuiz(quizInstance, index);
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 };
 
